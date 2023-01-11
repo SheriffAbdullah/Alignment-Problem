@@ -1,8 +1,11 @@
 # alignment-problem
  
  Semester: 4
+ 
  Subject: Design and Analysis of Algorithms
+ 
  Examination: CIA 1
+ 
  Time: 90 minutes
 
  
