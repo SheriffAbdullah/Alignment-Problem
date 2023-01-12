@@ -51,6 +51,16 @@ print(f"s1: {s1} \ns2: {s2}")
 
 #%%
 
+# ALIGNMENT MATRIX
+
+l1 = 16
+l2 = 16
+
+match_score = 5
+mismatch_score = -4
+
+alignment_matrix = [[0 for i in range(l1+1)] for i in range(l2+1)]
+
 def printAlignmentMatrix(alignment_matrix):
     for i in alignment_matrix:
         for j in i:
@@ -62,33 +72,27 @@ printAlignmentMatrix(alignment_matrix)
 
 #%%
 
-def dp(s1, s2, alignment_matrix, i_curr, j_curr):
-    print(i_curr, j_curr)
-    
-    if (i_curr > len(s1) or j_curr > len(s2)):
+def dp(s1, s2, alignment_matrix, i, j):
+    if j > len(s2):
+        print(alignment_matrix)
         return alignment_matrix
-
-    # MATCH
-    if s1[j_curr-1] == s2[i_curr-1]:
-        alignment_matrix[i_curr][j_curr] = alignment_matrix[i_curr-1][j_curr-1] + match_score;
-    # MISMATCH
     else:
-        alignment_matrix[i_curr][j_curr] = max(alignment_matrix[i_curr-1][j_curr], alignment_matrix[i_curr][j_curr-1]) + mismatch_score;
+        if i > len(s1):
+            dp(s1, s2, alignment_matrix, 1, j+1)
+            return alignment_matrix
+        else:
+            # MATCH
+            if s1[j-1] == s2[i-1]:
+                alignment_matrix[i][j] = alignment_matrix[i-1][j-1] + match_score;
+            # MISMATCH
+            else:
+                alignment_matrix[i][j] = max(alignment_matrix[i-1][j], alignment_matrix[i][j-1]) + mismatch_score;
+            dp(s1, s2, alignment_matrix, i+1, j)
+    
+print()
+printAlignmentMatrix(alignment_matrix)
 
-    dp(s1, s2, alignment_matrix, i_curr+1, j_curr)
-    dp(s1, s2, alignment_matrix, i_curr, j_curr+1)
-        
-# ALIGNMENT MATRIX
-
-l1 = 16
-l2 = 16
-
-match_score = 5
-mismatch_score = -4
-
-alignment_matrix = [[0 for i in range(l1+1)] for i in range(l2+1)]
-
-printAlignmentMatrix(dp(s1, s2, alignment_matrix, 1, 1))
+#dp(s1, s2, alignment_matrix, 1, 1)
 
 
 
