@@ -1,23 +1,3 @@
-
-'''
-1) Randomized Sequence s1 & s2
-* ONLY Recursive function calls *
-
-2) 
-
-3) 1st 
-
-Computational Complexity & Time Complexity
-
-Outputs:
--> Alignment Matrix
--> Traceback for 4 Matches + Alignment (with gaps)
--> 
-
-'''
-
-#%%
-
 import random
 
 random.seed(10)
