@@ -6,24 +6,43 @@ Examination: <b>CIA 1</b><br>
 Time: <b>90 minutes</b><br>
 
 <hr>
- 
-OBJECTIVE:
- 1) Functions to generate randomised 16-character sequences 's1' & 's2' using given character set - Done.
- 2) Recursive function calls are encouraged - Noted.
- 3) Output: First 4 maximal score sub-sequences - Done. 
- 4) Space Complexity - Done.
- 5) Time Complexity - Done.
- 6) Generate Alignment Matrix - Done.
- 7) Traceback in Alignment Matrix - Done.
- 8) Alignment Scores - Done.
-    
+
+ <h3><u>CONTENTS:</u></h3>
+ <ol type="I">
+	<li>Objectives</li>
+  	<li>Code Output</li>
+   	<li>Time Complexity</li>
+    	<li>Space Complexity</li>
+ </ol>
+
+ <hr>
+	 
+<h3><u>OBJECTIVES:</u></h3>
+ 1) Functions to generate randomised 16-character sequences 's1' & 's2' using given character set - Done.<br>
+ 2) Recursive function calls are encouraged - Noted.<br>
+ 3) Output: First 4 maximal score sub-sequences - Done.<br>
+ 4) Space Complexity - Done.<br>
+ 5) Time Complexity - Done.<br>
+ 6) Generate Alignment Matrix - Done.<br>
+ 7) Traceback in Alignment Matrix - Done.<br>
+ 8) Alignment Scores - Done.<br>
+<br>
 [
 TODO:
 Automate Step 3, to provide 'n' top-scoring sequences
 ]
 
 <hr>
-<h3><u>Time Complexity:</u></h3>
+
+<h3><u>CODE OUTPUT:</u></h3><br>
+<img width="432" alt="Screenshot 2023-06-27 at 21 13 16" src="https://github.com/SheriffAbdullah/alignment-problem/assets/94511829/8d7ff0d3-9b90-4c75-ab19-66f31fc28988">
+<br>
+<img width="432" alt="Screenshot 2023-06-27 at 21 13 37" src="https://github.com/SheriffAbdullah/alignment-problem/assets/94511829/b7398836-e950-4e74-a578-bab518766392">
+
+<br><hr>
+
+<h3><u>TIME COMPLEXITY:</u></h3>
+<br>
 <table>
 	<tr>
 		<th>Section</th>
@@ -55,9 +74,10 @@ Automate Step 3, to provide 'n' top-scoring sequences
  	</tr>
 </table>
 
-<hr>
+<br><hr>
 
-<h3><u>Space Complexity:</u></h3>
+<h3><u>SPACE COMPLEXITY:</u></h3>
+<br>
 <table>
 	<tr>
 		<th>Section</th>
